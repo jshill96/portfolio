@@ -1,0 +1,77 @@
+:root {
+    --backgroundColorDark: #111111;
+    --backgroundColorLight: #ffffff;
+
+    --headingColorDark: #fcfcfc;
+    --headingColorLight: #1c1c1c;
+
+    --textColorDark: #e8e8e8;
+    --textColorLight: #4f4f4f;
+}
+
+@media(prefers-color-scheme: light) {
+    :root {
+        --backgroundColor: var(--backgroundColorLight);
+        --textColor: var(--textColorLight);
+        --headingColor: var(--headingColorLight);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --backgroundColor: var(--backgroundColorDark);
+        --textColor: var(--textColorDark);
+        --headingColor: var(--headingColorDark);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 21px;
+}
+
+body {
+    color: var(--textColor);
+    background-color: var(--backgroundColor);
+}
+
+main {
+    padding: 0.8rem;
+    max-width: 35rem;
+    margin: auto;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+    color: var(--headingColor);
+    line-height: 1;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3, h4, h5 {
+    font-size: 1.953rem;
+}
+
+small {
+    font-size: 1.25rem;
+    display: block;
+    margin-top: 1rem;
+}
+
+.copy {
+    line-height: 1.5;
+}
+
+.copyright {
+    font-size: 0.64rem;
+}
